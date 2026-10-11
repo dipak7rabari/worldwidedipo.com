@@ -1,0 +1,335 @@
+/* =========================================================
+   WORLDWIDE DIPO — ANALYTICS
+   ========================================================= */
+
+.analytics-page {
+  min-height: 100vh;
+
+  background: #f8fafc;
+
+  color: #0f172a;
+}
+
+.analytics-container {
+  width: min(
+    calc(100% - 24px),
+    1000px
+  );
+
+  margin-inline: auto;
+
+  padding: 32px 0 70px;
+}
+
+.analytics-header {
+  display: flex;
+
+  align-items: flex-start;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  margin-bottom: 22px;
+}
+
+.analytics-header h1 {
+  margin: 0;
+
+  font-size: clamp(
+    30px,
+    5vw,
+    42px
+  );
+
+  line-height: 1.15;
+
+  letter-spacing: -0.03em;
+}
+
+.analytics-header p:last-child {
+  margin: 8px 0 0;
+
+  color: #64748b;
+
+  font-size: 13px;
+
+  line-height: 1.6;
+}
+
+/* =========================================================
+   OVERVIEW
+   ========================================================= */
+
+.analytics-overview {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 10px;
+}
+
+.analytics-stat-card {
+  min-width: 0;
+
+  padding: 18px;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 12px;
+
+  background: #ffffff;
+}
+
+.analytics-stat-card span {
+  display: block;
+
+  color: #64748b;
+
+  font-size: 11px;
+
+  font-weight: 700;
+}
+
+.analytics-stat-card strong {
+  display: block;
+
+  margin-top: 7px;
+
+  font-size: 28px;
+
+  line-height: 1;
+
+  letter-spacing: -0.03em;
+}
+
+.analytics-stat-card small {
+  display: block;
+
+  margin-top: 7px;
+
+  color: #94a3b8;
+
+  font-size: 10px;
+
+  line-height: 1.4;
+}
+
+.analytics-stat-primary {
+  border-color: #bfdbfe;
+
+  background: #eff6ff;
+}
+
+.analytics-stat-primary strong {
+  color: #1d4ed8;
+}
+
+/* =========================================================
+   RECENT
+   ========================================================= */
+
+.analytics-recent-card {
+  margin-top: 18px;
+
+  padding: 20px;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 14px;
+
+  background: #ffffff;
+}
+
+.analytics-section-heading h2 {
+  margin: 0;
+
+  font-size: 20px;
+}
+
+.analytics-view-list {
+  margin-top: 16px;
+}
+
+.analytics-view-row {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 14px;
+
+  padding: 13px 0;
+
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.analytics-view-row:last-child {
+  border-bottom: 0;
+}
+
+.analytics-view-row > div {
+  display: grid;
+
+  gap: 4px;
+
+  min-width: 0;
+}
+
+.analytics-view-row strong {
+  font-size: 13px;
+}
+
+.analytics-view-row span {
+  overflow: hidden;
+
+  color: #64748b;
+
+  font-size: 11px;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+}
+
+.analytics-view-row time {
+  flex: 0 0 auto;
+
+  color: #94a3b8;
+
+  font-size: 10px;
+}
+
+.analytics-empty {
+  margin-top: 16px;
+
+  padding: 30px 18px;
+
+  border: 1px dashed #cbd5e1;
+
+  border-radius: 10px;
+
+  text-align: center;
+}
+
+.analytics-empty strong {
+  font-size: 14px;
+}
+
+.analytics-empty p {
+  max-width: 480px;
+
+  margin: 7px auto 0;
+
+  color: #64748b;
+
+  font-size: 12px;
+
+  line-height: 1.6;
+}
+
+/* =========================================================
+   STATUS / PRIVACY
+   ========================================================= */
+
+.analytics-status-notice {
+  margin-bottom: 16px;
+
+  padding: 14px;
+
+  border: 1px solid #fde68a;
+
+  border-radius: 10px;
+
+  background: #fffbeb;
+}
+
+.analytics-status-notice strong {
+  color: #92400e;
+
+  font-size: 12px;
+}
+
+.analytics-status-notice p {
+  margin: 5px 0 0;
+
+  color: #92400e;
+
+  font-size: 12px;
+}
+
+.analytics-privacy-note {
+  margin-top: 18px;
+
+  padding: 15px;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 10px;
+
+  background: #ffffff;
+}
+
+.analytics-privacy-note strong {
+  font-size: 12px;
+}
+
+.analytics-privacy-note p {
+  margin: 6px 0 0;
+
+  color: #64748b;
+
+  font-size: 11px;
+
+  line-height: 1.6;
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 760px) {
+  .analytics-header {
+    flex-direction: column;
+  }
+
+  .analytics-header
+    .dashboard-action-primary {
+    width: 100%;
+  }
+
+  .analytics-overview {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .analytics-container {
+    padding-top: 24px;
+  }
+
+  .analytics-overview {
+    grid-template-columns: 1fr;
+  }
+
+  .analytics-stat-card {
+    padding: 16px;
+  }
+
+  .analytics-recent-card {
+    padding: 17px;
+  }
+
+  .analytics-view-row {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+  .analytics-view-row time {
+    font-size: 10px;
+  }
+}

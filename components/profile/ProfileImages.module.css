@@ -1,0 +1,138 @@
+.media {
+  color: #152033;
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.media h3 {
+  font-size: 18px;
+  margin: 0;
+  letter-spacing: -0.03em;
+}
+
+.media p {
+  font-size: 12px;
+  color: #64748b;
+  margin: 6px 0;
+  line-height: 1.6;
+}
+
+.avatarRow {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  padding: 24px 0;
+  margin-bottom: 22px;
+  border-bottom: 1px solid #edf0f4;
+}
+
+.avatar {
+  width: 90px;
+  height: 90px;
+  flex-shrink: 0;
+  border: 4px solid white;
+  outline: 1px solid #e2e8f0;
+  border-radius: 26px;
+  overflow: hidden;
+  background: #eef3ff;
+  display: grid;
+  place-items: center;
+  font-size: 30px;
+  font-weight: 800;
+  color: #2563eb;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.upload {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  padding: 11px 15px;
+  background: #172033;
+  color: #fff;
+  border-radius: 11px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.upload input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.upload:focus-within {
+  outline: 3px solid #9486db;
+  outline-offset: 3px;
+}
+
+.upload:has(input:disabled) {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.progress {
+  display: block;
+  width: 100%;
+  height: 5px;
+  margin-top: 16px;
+  accent-color: #6250c9;
+}
+
+.empty {
+  padding: 28px 15px;
+  margin-top: 16px;
+  border: 1px dashed #d3dae5;
+  border-radius: 15px;
+  color: #64748b;
+  text-align: center;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.pending {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 16px;
+  font-size: 13px;
+}
+
+.pending img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.media .error {
+  padding: 12px;
+  background: #fff1f2;
+  color: #b91c1c;
+  border-radius: 10px;
+  margin-top: 16px;
+}
+
+.media .success {
+  padding: 12px;
+  background: #eefcf4;
+  color: #166534;
+  border-radius: 10px;
+  margin-top: 16px;
+}

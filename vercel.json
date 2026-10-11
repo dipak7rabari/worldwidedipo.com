@@ -1,0 +1,11 @@
+{
+  "framework": "nextjs",
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "crons": [
+    {
+      "path": "/api/cron/lifecycle",
+      "schedule": "0 * * * *"
+    }
+  ]
+}

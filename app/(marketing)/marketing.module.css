@@ -1,0 +1,2183 @@
+/* ================================================================
+   WORLDWIDE DIPO
+   MARKETING LAYOUT
+   PREMIUM / GEN-Z / MOTION SYSTEM
+   ZERO GLOBAL SELECTORS
+   CSS MODULE SAFE
+   ================================================================ */
+
+
+/* ================================================================
+   LAYOUT
+   ================================================================ */
+
+.layout {
+  --dipo-ink: #0b1224;
+  --dipo-ink-2: #111a2f;
+  --dipo-blue: #2864e8;
+  --dipo-blue-2: #5e8cff;
+  --dipo-blue-soft: #edf3ff;
+
+  --dipo-muted: #69758a;
+  --dipo-muted-2: #8c96a8;
+
+  --dipo-border: #e7ebf2;
+  --dipo-white: #ffffff;
+
+  position: relative;
+
+  min-height: 100vh;
+
+  overflow-x: clip;
+
+  background:
+    radial-gradient(
+      circle at 80% 8%,
+      rgba(40, 100, 232, 0.055),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 5% 45%,
+      rgba(91, 132, 235, 0.035),
+      transparent 25%
+    ),
+    #ffffff;
+
+  color: var(--dipo-ink);
+
+  isolation: isolate;
+}
+
+
+/* ================================================================
+   AMBIENT SYSTEM
+   ================================================================ */
+
+.ambient {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: -5;
+
+  overflow: hidden;
+
+  pointer-events: none;
+}
+
+
+.orbOne,
+.orbTwo,
+.orbThree {
+  position: absolute;
+
+  border-radius: 999px;
+
+  pointer-events: none;
+
+  filter: blur(75px);
+
+  will-change: transform;
+}
+
+
+.orbOne {
+  width: 430px;
+  height: 430px;
+
+  top: 2vh;
+  right: -230px;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(65, 117, 246, 0.2),
+      transparent 70%
+    );
+
+  animation:
+    orbOneMove
+    13s
+    ease-in-out
+    infinite
+    alternate;
+}
+
+
+.orbTwo {
+  width: 500px;
+  height: 500px;
+
+  left: -270px;
+  top: 42vh;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(91, 137, 255, 0.13),
+      transparent 70%
+    );
+
+  animation:
+    orbTwoMove
+    17s
+    ease-in-out
+    infinite
+    alternate-reverse;
+}
+
+
+.orbThree {
+  width: 260px;
+  height: 260px;
+
+  right: 5%;
+  top: 75vh;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(40, 100, 232, 0.09),
+      transparent 70%
+    );
+
+  animation:
+    orbThreeMove
+    11s
+    ease-in-out
+    infinite
+    alternate;
+}
+
+
+/* ================================================================
+   BACKGROUND GRID
+   ================================================================ */
+
+.grid {
+  position: absolute;
+
+  inset: 0;
+
+  opacity: 0.28;
+
+  background-image:
+    linear-gradient(
+      rgba(11, 18, 36, 0.035) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(11, 18, 36, 0.035) 1px,
+      transparent 1px
+    );
+
+  background-size:
+    64px 64px;
+
+  mask-image:
+    linear-gradient(
+      to bottom,
+      black 0%,
+      rgba(0, 0, 0, 0.55) 45%,
+      transparent 100%
+    );
+}
+
+
+/* ================================================================
+   NOISE
+   ================================================================ */
+
+.noise {
+  position: absolute;
+
+  inset: 0;
+
+  opacity: 0.018;
+
+  background-image:
+    radial-gradient(
+      rgba(0, 0, 0, 0.9) 0.5px,
+      transparent 0.6px
+    );
+
+  background-size:
+    5px 5px;
+
+  mix-blend-mode: multiply;
+}
+
+
+/* ================================================================
+   FLOATING DOTS
+   ================================================================ */
+
+.floatingDotOne,
+.floatingDotTwo,
+.floatingDotThree {
+  position: absolute;
+
+  width: 4px;
+  height: 4px;
+
+  border-radius: 50%;
+
+  background: #5d8cff;
+
+  box-shadow:
+    0 0 14px
+    rgba(55, 108, 244, 0.7);
+
+  opacity: 0.45;
+}
+
+
+.floatingDotOne {
+  top: 23%;
+  left: 12%;
+
+  animation:
+    tinyFloatOne
+    6s
+    ease-in-out
+    infinite;
+}
+
+
+.floatingDotTwo {
+  top: 38%;
+  right: 16%;
+
+  animation:
+    tinyFloatTwo
+    8s
+    ease-in-out
+    infinite;
+}
+
+
+.floatingDotThree {
+  top: 70%;
+  left: 23%;
+
+  animation:
+    tinyFloatThree
+    7s
+    ease-in-out
+    infinite;
+}
+
+
+/* ================================================================
+   HEADER
+   ================================================================ */
+
+.header {
+  position: sticky;
+
+  top: 0;
+
+  z-index: 100;
+
+  width: 100%;
+
+  border-bottom:
+    1px solid
+    rgba(226, 231, 240, 0.86);
+
+  background:
+    rgba(255, 255, 255, 0.82);
+
+  backdrop-filter:
+    blur(24px)
+    saturate(1.3);
+
+  -webkit-backdrop-filter:
+    blur(24px)
+    saturate(1.3);
+
+  animation:
+    headerIn
+    0.8s
+    cubic-bezier(.2,.8,.2,1)
+    both;
+}
+
+
+.header::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: -1px;
+
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(40, 100, 232, 0.2),
+      transparent
+    );
+}
+
+
+.headerInner {
+  width:
+    min(
+      1240px,
+      calc(100% - 40px)
+    );
+
+  min-height: 78px;
+
+  margin: 0 auto;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 24px;
+}
+
+
+/* ================================================================
+   BRAND
+   ================================================================ */
+
+.brand {
+  display: inline-flex;
+
+  align-items: center;
+
+  flex: 0 0 auto;
+
+  gap: 12px;
+
+  color: var(--dipo-ink);
+
+  text-decoration: none;
+
+  animation:
+    brandIn
+    0.9s
+    .08s
+    cubic-bezier(.2,.8,.2,1)
+    both;
+}
+
+
+.brandCopy {
+  display: grid;
+
+  gap: 4px;
+}
+
+
+.brandCopy strong {
+  color: var(--dipo-ink);
+
+  font-size: 16px;
+
+  line-height: 1;
+
+  font-weight: 950;
+
+  letter-spacing: -0.045em;
+}
+
+
+.brandCopy small {
+  color: var(--dipo-muted-2);
+
+  font-size: 10px;
+
+  line-height: 1;
+
+  font-weight: 750;
+}
+
+
+/* ================================================================
+   DIPO MARK
+   ================================================================ */
+
+.mark,
+.markSmall {
+  position: relative;
+
+  display: grid;
+
+  place-items: center;
+
+  flex: 0 0 auto;
+
+  overflow: hidden;
+
+  border:
+    1px solid
+    rgba(70, 108, 195, 0.3);
+
+  background:
+    linear-gradient(
+      145deg,
+      #101a31,
+      #081021
+    );
+
+  isolation: isolate;
+
+  box-shadow:
+    0 12px 28px
+    rgba(11, 18, 36, 0.16),
+    inset 0 1px 0
+    rgba(255,255,255,.09);
+}
+
+
+.mark {
+  width: 43px;
+  height: 43px;
+
+  border-radius: 14px;
+}
+
+
+.markSmall {
+  width: 36px;
+  height: 36px;
+
+  border-radius: 11px;
+}
+
+
+.markGlow {
+  position: absolute;
+
+  width: 80%;
+  height: 80%;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(91, 139, 255, 0.45),
+      transparent 68%
+    );
+
+  filter: blur(9px);
+
+  animation:
+    markGlow
+    3.8s
+    ease-in-out
+    infinite;
+}
+
+
+.markD {
+  position: relative;
+
+  z-index: 3;
+
+  color: #ffffff;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 23px;
+
+  line-height: 1;
+
+  font-weight: 950;
+
+  letter-spacing: -0.12em;
+
+  transform:
+    translateX(-1px);
+}
+
+
+.markSmall .markD {
+  font-size: 18px;
+}
+
+
+.markOrbit {
+  position: absolute;
+
+  z-index: 2;
+
+  width: 125%;
+  height: 47%;
+
+  border:
+    1.5px solid
+    rgba(105, 151, 255, 0.95);
+
+  border-radius: 999px;
+
+  transform:
+    rotate(-32deg);
+
+  box-shadow:
+    0 0 11px
+    rgba(83, 133, 255, 0.3);
+
+  animation:
+    orbitSpin
+    6s
+    linear
+    infinite;
+}
+
+
+.markDot {
+  position: absolute;
+
+  z-index: 4;
+
+  top: 7px;
+  right: 7px;
+
+  width: 4px;
+  height: 4px;
+
+  border-radius: 50%;
+
+  background: #83a8ff;
+
+  box-shadow:
+    0 0 12px
+    rgba(111, 157, 255, 0.9);
+
+  animation:
+    dotBlink
+    2.2s
+    ease-in-out
+    infinite;
+}
+
+
+/* ================================================================
+   NAVIGATION
+   ================================================================ */
+
+.nav {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 2px;
+
+  animation:
+    navIn
+    .9s
+    .12s
+    cubic-bezier(.2,.8,.2,1)
+    both;
+}
+
+
+.navLink {
+  position: relative;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  padding:
+    11px
+    13px;
+
+  border-radius: 12px;
+
+  color: #69758a;
+
+  text-decoration: none;
+
+  font-size: 12px;
+
+  line-height: 1;
+
+  font-weight: 850;
+
+  transition:
+    color .22s ease,
+    background .22s ease,
+    transform .22s ease;
+}
+
+
+.navIndex {
+  color: #aab2c0;
+
+  font-size: 7px;
+
+  font-weight: 950;
+
+  letter-spacing: .08em;
+
+  transition:
+    color .22s ease;
+}
+
+
+.navText {
+  position: relative;
+}
+
+
+.navText::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  right: 0;
+
+  bottom: -7px;
+
+  height: 1.5px;
+
+  border-radius: 999px;
+
+  background:
+    linear-gradient(
+      90deg,
+      var(--dipo-blue),
+      var(--dipo-blue-2)
+    );
+
+  transform:
+    scaleX(0);
+
+  transform-origin:
+    center;
+
+  transition:
+    transform .25s
+    cubic-bezier(.2,.8,.2,1);
+}
+
+
+.navLink:hover {
+  color: var(--dipo-ink);
+
+  background:
+    rgba(40, 100, 232, 0.045);
+
+  transform:
+    translateY(-1px);
+}
+
+
+.navLink:hover .navIndex {
+  color: var(--dipo-blue);
+}
+
+
+.navLink:hover .navText::after {
+  transform:
+    scaleX(1);
+}
+
+
+/* ================================================================
+   HEADER ACTIONS
+   ================================================================ */
+
+.headerActions {
+  display: flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  animation:
+    actionsIn
+    .9s
+    .18s
+    cubic-bezier(.2,.8,.2,1)
+    both;
+}
+
+
+.signIn {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  min-height: 46px;
+
+  padding:
+    0
+    11px;
+
+  color: #4d5a70;
+
+  text-decoration: none;
+
+  font-size: 12px;
+
+  font-weight: 850;
+
+  transition:
+    color .2s ease;
+}
+
+
+.signIn:hover {
+  color: var(--dipo-blue);
+}
+
+
+/* ================================================================
+   CREATE BUTTON
+   ================================================================ */
+
+.createButton {
+  position: relative;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 13px;
+
+  min-height: 48px;
+
+  padding:
+    0
+    19px;
+
+  overflow: hidden;
+
+  border:
+    1px solid
+    #10192b;
+
+  border-radius: 16px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #10192c,
+      #081021
+    );
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-size: 12px;
+
+  font-weight: 900;
+
+  box-shadow:
+    0 10px 28px
+    rgba(11,18,36,.15),
+    inset 0 1px 0
+    rgba(255,255,255,.08);
+
+  transition:
+    transform .28s
+    cubic-bezier(.2,.8,.2,1),
+    box-shadow .28s ease;
+}
+
+
+.createButton::before {
+  content: "";
+
+  position: absolute;
+
+  top: -100%;
+  bottom: -100%;
+
+  left: -70%;
+
+  width: 35%;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255,255,255,.24),
+      transparent
+    );
+
+  transform:
+    rotate(18deg);
+
+  animation:
+    buttonLight
+    4.8s
+    ease-in-out
+    infinite;
+}
+
+
+.createButton::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(93, 140, 255, .22),
+      transparent 65%
+    );
+}
+
+
+.createButton span {
+  position: relative;
+
+  z-index: 2;
+}
+
+
+.arrow {
+  position: relative;
+
+  z-index: 2;
+
+  display: inline-flex;
+
+  font-size: 18px;
+
+  line-height: 1;
+
+  font-weight: 500;
+
+  transition:
+    transform .28s
+    cubic-bezier(.2,.8,.2,1);
+}
+
+
+.createButton:hover {
+  transform:
+    translateY(-2px);
+
+  box-shadow:
+    0 16px 35px
+    rgba(11,18,36,.2),
+    0 0 0 4px
+    rgba(40,100,232,.05);
+}
+
+
+.createButton:hover .arrow {
+  transform:
+    translate(
+      3px,
+      -3px
+    );
+}
+
+
+/* ================================================================
+   MAIN
+   ================================================================ */
+
+.main {
+  position: relative;
+
+  z-index: 1;
+
+  min-height: 50vh;
+
+  animation:
+    mainIn
+    .75s
+    .08s
+    cubic-bezier(.2,.8,.2,1)
+    both;
+}
+
+
+/* ================================================================
+   FOOTER
+   ================================================================ */
+
+.footer {
+  position: relative;
+
+  z-index: 5;
+
+  margin-top: 90px;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      145deg,
+      #0a1224 0%,
+      #0d1831 52%,
+      #081021 100%
+    );
+
+  color: #ffffff;
+
+  isolation: isolate;
+}
+
+
+.footer::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(71, 116, 239, 0.16),
+      transparent 37%
+    );
+}
+
+
+.footerTopGlow {
+  position: absolute;
+
+  top: -230px;
+
+  left: 50%;
+
+  width: 600px;
+  height: 300px;
+
+  transform:
+    translateX(-50%);
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(67, 114, 246, .4),
+      transparent 68%
+    );
+
+  filter:
+    blur(48px);
+
+  animation:
+    footerPulse
+    6s
+    ease-in-out
+    infinite;
+}
+
+
+.footerGrid {
+  position: absolute;
+
+  inset: 0;
+
+  opacity: .14;
+
+  background-image:
+    linear-gradient(
+      rgba(255,255,255,.07) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255,255,255,.07) 1px,
+      transparent 1px
+    );
+
+  background-size:
+    70px 70px;
+
+  mask-image:
+    linear-gradient(
+      to bottom,
+      transparent,
+      black 28%,
+      transparent 100%
+    );
+}
+
+
+.footerInner {
+  position: relative;
+
+  z-index: 2;
+
+  width:
+    min(
+      1240px,
+      calc(100% - 40px)
+    );
+
+  margin: 0 auto;
+
+  padding:
+    74px
+    0
+    24px;
+}
+
+
+/* ================================================================
+   FOOTER COLUMNS
+   ================================================================ */
+
+.footerColumns {
+  display: grid;
+
+  grid-template-columns:
+    1.45fr
+    .75fr
+    1fr;
+
+  gap: 72px;
+}
+
+
+/* ================================================================
+   FOOTER BRAND
+   ================================================================ */
+
+.footerBrand {
+  max-width: 430px;
+
+  animation:
+    footerReveal
+    .9s
+    .12s
+    cubic-bezier(.2,.8,.2,1)
+    both;
+}
+
+
+.footerLogo {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  color: #ffffff;
+
+  text-decoration: none;
+}
+
+
+.footerLogoCopy {
+  display: grid;
+
+  gap: 4px;
+}
+
+
+.footerLogoCopy strong {
+  color: #ffffff;
+
+  font-size: 16px;
+
+  line-height: 1;
+
+  font-weight: 950;
+
+  letter-spacing: -.04em;
+}
+
+
+.footerLogoCopy small {
+  color: #7e8ca4;
+
+  font-size: 9px;
+
+  line-height: 1.2;
+
+  font-weight: 750;
+}
+
+
+.footerTagline {
+  margin:
+    24px
+    0
+    11px;
+
+  color: #aeb9cc;
+
+  font-size: 13px;
+
+  line-height: 1.7;
+
+  font-weight: 600;
+}
+
+
+.productBadge {
+  display: inline-flex;
+
+  align-items: center;
+
+  padding:
+    7px
+    11px;
+
+  border:
+    1px solid
+    rgba(255,255,255,.09);
+
+  border-radius: 999px;
+
+  background:
+    rgba(255,255,255,.045);
+
+  color: #76839b;
+
+  font-size: 9px;
+
+  line-height: 1;
+
+  font-weight: 800;
+}
+
+
+/* ================================================================
+   FOOTER GROUP
+   ================================================================ */
+
+.footerGroup {
+  display: grid;
+
+  align-content: start;
+
+  gap: 11px;
+
+  animation:
+    footerReveal
+    .9s
+    .22s
+    cubic-bezier(.2,.8,.2,1)
+    both;
+}
+
+
+.footerGroup:nth-child(3) {
+  animation-delay: .3s;
+}
+
+
+.footerHeading {
+  margin-bottom: 7px;
+
+  color: #74829a;
+
+  font-size: 8px;
+
+  line-height: 1;
+
+  font-weight: 950;
+
+  letter-spacing: .18em;
+
+  text-transform: uppercase;
+}
+
+
+.footerLinks {
+  display: grid;
+
+  gap: 10px;
+}
+
+
+.footerLink {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 18px;
+
+  width: fit-content;
+
+  color: #d8e0ec;
+
+  text-decoration: none;
+
+  font-size: 11px;
+
+  line-height: 1.35;
+
+  font-weight: 750;
+
+  transition:
+    color .22s ease,
+    transform .22s ease;
+}
+
+
+.footerArrow {
+  color: #65748d;
+
+  transition:
+    color .22s ease,
+    transform .22s
+    cubic-bezier(.2,.8,.2,1);
+}
+
+
+.footerLink:hover {
+  color: #ffffff;
+
+  transform:
+    translateX(3px);
+}
+
+
+.footerLink:hover .footerArrow {
+  color: #87a9ff;
+
+  transform:
+    translate(
+      3px,
+      -3px
+    );
+}
+
+
+/* ================================================================
+   DIVIDER
+   ================================================================ */
+
+.divider {
+  width: 100%;
+
+  height: 1px;
+
+  margin:
+    54px
+    0
+    23px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255,255,255,.11) 20%,
+      rgba(255,255,255,.11) 80%,
+      transparent
+    );
+}
+
+
+/* ================================================================
+   FOOTER BOTTOM
+   ================================================================ */
+
+.footerBottom {
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    auto
+    1fr;
+
+  align-items: center;
+
+  gap: 22px;
+}
+
+
+/* ================================================================
+   MADE IN INDIA
+   ================================================================ */
+
+.madeInIndia {
+  display: flex;
+
+  align-items: center;
+
+  gap: 5px;
+
+  color: #aeb9ca;
+
+  font-size: 10px;
+
+  line-height: 1;
+
+  font-weight: 750;
+
+  animation:
+    bottomReveal
+    .8s
+    .25s
+    cubic-bezier(.2,.8,.2,1)
+    both;
+}
+
+
+.heart {
+  display: inline-block;
+
+  font-size: 13px;
+
+  transform-origin:
+    center;
+
+  animation:
+    heartbeat
+    1.8s
+    ease-in-out
+    infinite;
+}
+
+
+/* ================================================================
+   DM PRODUCT
+   ================================================================ */
+
+.dmProduct {
+  color: #ffffff;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 16px;
+
+  line-height: 1;
+
+  font-weight: 700;
+
+  letter-spacing: .025em;
+
+  white-space: nowrap;
+
+  text-shadow:
+    0 0 22px
+    rgba(100, 145, 255, .15);
+
+  animation:
+    productReveal
+    .9s
+    .34s
+    cubic-bezier(.2,.8,.2,1)
+    both;
+}
+
+
+/* ================================================================
+   COPYRIGHT
+   ================================================================ */
+
+.copyright {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: flex-end;
+
+  flex-wrap: wrap;
+
+  gap: 8px;
+
+  margin: 0;
+
+  color: #69768e;
+
+  font-size: 9px;
+
+  line-height: 1.4;
+
+  font-weight: 700;
+
+  text-align: right;
+
+  animation:
+    bottomReveal
+    .8s
+    .44s
+    cubic-bezier(.2,.8,.2,1)
+    both;
+}
+
+
+.copyrightDot {
+  color: #3c4961;
+}
+
+
+/* ================================================================
+   ANIMATIONS
+   ================================================================ */
+
+@keyframes headerIn {
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(-16px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0);
+  }
+}
+
+
+@keyframes brandIn {
+  from {
+    opacity: 0;
+
+    transform:
+      translateX(-18px)
+      scale(.96);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateX(0)
+      scale(1);
+  }
+}
+
+
+@keyframes navIn {
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(-9px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0);
+  }
+}
+
+
+@keyframes actionsIn {
+  from {
+    opacity: 0;
+
+    transform:
+      translateX(18px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateX(0);
+  }
+}
+
+
+@keyframes mainIn {
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0);
+  }
+}
+
+
+@keyframes orbOneMove {
+  from {
+    transform:
+      translate3d(
+        0,
+        0,
+        0
+      )
+      scale(1);
+  }
+
+  to {
+    transform:
+      translate3d(
+        -30px,
+        35px,
+        0
+      )
+      scale(1.08);
+  }
+}
+
+
+@keyframes orbTwoMove {
+  from {
+    transform:
+      translate3d(
+        0,
+        0,
+        0
+      )
+      scale(1);
+  }
+
+  to {
+    transform:
+      translate3d(
+        35px,
+        -30px,
+        0
+      )
+      scale(1.08);
+  }
+}
+
+
+@keyframes orbThreeMove {
+  from {
+    transform:
+      translate3d(
+        0,
+        0,
+        0
+      );
+  }
+
+  to {
+    transform:
+      translate3d(
+        -24px,
+        -25px,
+        0
+      );
+  }
+}
+
+
+@keyframes tinyFloatOne {
+  0%,
+  100% {
+    transform:
+      translate(
+        0,
+        0
+      );
+
+    opacity: .25;
+  }
+
+  50% {
+    transform:
+      translate(
+        12px,
+        -17px
+      );
+
+    opacity: .75;
+  }
+}
+
+
+@keyframes tinyFloatTwo {
+  0%,
+  100% {
+    transform:
+      translate(
+        0,
+        0
+      );
+
+    opacity: .3;
+  }
+
+  50% {
+    transform:
+      translate(
+        -15px,
+        12px
+      );
+
+    opacity: .8;
+  }
+}
+
+
+@keyframes tinyFloatThree {
+  0%,
+  100% {
+    transform:
+      translate(
+        0,
+        0
+      );
+
+    opacity: .25;
+  }
+
+  50% {
+    transform:
+      translate(
+        10px,
+        18px
+      );
+
+    opacity: .7;
+  }
+}
+
+
+@keyframes markGlow {
+  0%,
+  100% {
+    opacity: .45;
+
+    transform:
+      scale(.82);
+  }
+
+  50% {
+    opacity: .95;
+
+    transform:
+      scale(1.1);
+  }
+}
+
+
+@keyframes orbitSpin {
+  0% {
+    transform:
+      rotate(-32deg);
+  }
+
+  100% {
+    transform:
+      rotate(328deg);
+  }
+}
+
+
+@keyframes dotBlink {
+  0%,
+  100% {
+    opacity: .4;
+
+    transform:
+      scale(.8);
+  }
+
+  50% {
+    opacity: 1;
+
+    transform:
+      scale(1.3);
+  }
+}
+
+
+@keyframes buttonLight {
+  0%,
+  52% {
+    left: -70%;
+
+    opacity: 0;
+  }
+
+  62% {
+    opacity: 1;
+  }
+
+  78%,
+  100% {
+    left: 150%;
+
+    opacity: 0;
+  }
+}
+
+
+@keyframes footerPulse {
+  0%,
+  100% {
+    opacity: .3;
+
+    transform:
+      translateX(-50%)
+      scale(.9);
+  }
+
+  50% {
+    opacity: .58;
+
+    transform:
+      translateX(-50%)
+      scale(1.08);
+  }
+}
+
+
+@keyframes footerReveal {
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0);
+  }
+}
+
+
+@keyframes bottomReveal {
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(9px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0);
+  }
+}
+
+
+@keyframes productReveal {
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(9px)
+      scale(.96);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0)
+      scale(1);
+  }
+}
+
+
+@keyframes heartbeat {
+  0%,
+  100% {
+    transform:
+      scale(1);
+  }
+
+  10% {
+    transform:
+      scale(1.2);
+  }
+
+  20% {
+    transform:
+      scale(1);
+  }
+
+  30% {
+    transform:
+      scale(1.1);
+  }
+
+  40% {
+    transform:
+      scale(1);
+  }
+}
+
+
+/* ================================================================
+   TABLET
+   ================================================================ */
+
+@media (max-width: 980px) {
+  .nav {
+    display: none;
+  }
+
+
+  .headerInner {
+    min-height:
+      72px;
+  }
+
+
+  .footerColumns {
+    grid-template-columns:
+      1fr 1fr;
+
+    gap:
+      45px;
+  }
+
+
+  .footerBrand {
+    grid-column:
+      1 / -1;
+  }
+
+
+  .footerBottom {
+    grid-template-columns:
+      1fr 1fr;
+  }
+
+
+  .dmProduct {
+    grid-column:
+      1 / -1;
+
+    grid-row:
+      1;
+
+    text-align:
+      center;
+  }
+}
+
+
+/* ================================================================
+   MOBILE
+   ================================================================ */
+
+@media (max-width: 640px) {
+  .headerInner {
+    width:
+      calc(100% - 22px);
+
+    min-height:
+      68px;
+
+    gap:
+      7px;
+  }
+
+
+  .brand {
+    gap:
+      9px;
+
+    min-width:
+      0;
+  }
+
+
+  .mark {
+    width:
+      38px;
+
+    height:
+      38px;
+
+    border-radius:
+      12px;
+  }
+
+
+  .markD {
+    font-size:
+      20px;
+  }
+
+
+  .brandCopy {
+    min-width:
+      0;
+  }
+
+
+  .brandCopy strong {
+    font-size:
+      14px;
+
+    white-space:
+      nowrap;
+  }
+
+
+  .brandCopy small {
+    font-size:
+      8px;
+  }
+
+
+  .signIn {
+    display:
+      none;
+  }
+
+
+  .createButton {
+    min-height:
+      44px;
+
+    padding:
+      0 14px;
+
+    border-radius:
+      14px;
+
+    gap:
+      9px;
+
+    font-size:
+      11px;
+  }
+
+
+  .arrow {
+    font-size:
+      17px;
+  }
+
+
+  .footer {
+    margin-top:
+      55px;
+  }
+
+
+  .footerInner {
+    width:
+      calc(100% - 28px);
+
+    padding:
+      54px
+      0
+      20px;
+  }
+
+
+  .footerColumns {
+    grid-template-columns:
+      1fr;
+
+    gap:
+      34px;
+  }
+
+
+  .footerBrand {
+    grid-column:
+      auto;
+  }
+
+
+  .divider {
+    margin:
+      40px
+      0
+      21px;
+  }
+
+
+  .footerBottom {
+    grid-template-columns:
+      1fr;
+
+    align-items:
+      start;
+
+    gap:
+      14px;
+  }
+
+
+  .dmProduct {
+    grid-column:
+      auto;
+
+    grid-row:
+      auto;
+
+    text-align:
+      left;
+
+    font-size:
+      15px;
+  }
+
+
+  .copyright {
+    justify-content:
+      flex-start;
+
+    text-align:
+      left;
+  }
+
+
+  .orbOne {
+    width:
+      280px;
+
+    height:
+      280px;
+
+    right:
+      -180px;
+  }
+
+
+  .orbTwo {
+    width:
+      340px;
+
+    height:
+      340px;
+
+    left:
+      -220px;
+  }
+
+
+  .floatingDotOne {
+    left:
+      7%;
+  }
+
+
+  .floatingDotTwo {
+    right:
+      7%;
+  }
+}
+
+
+/* ================================================================
+   SMALL MOBILE
+   ================================================================ */
+
+@media (max-width: 390px) {
+  .headerInner {
+    width:
+      calc(100% - 16px);
+  }
+
+
+  .brandCopy strong {
+    font-size:
+      13px;
+  }
+
+
+  .brandCopy small {
+    display:
+      none;
+  }
+
+
+  .createButton {
+    min-height:
+      42px;
+
+    padding:
+      0 12px;
+
+    font-size:
+      10px;
+  }
+
+
+  .footerInner {
+    width:
+      calc(100% - 24px);
+  }
+}
+
+
+/* ================================================================
+   ACCESSIBILITY
+   IMPORTANT:
+   NO STANDALONE "*" SELECTOR
+   ================================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  .orbOne,
+  .orbTwo,
+  .orbThree,
+  .floatingDotOne,
+  .floatingDotTwo,
+  .floatingDotThree,
+  .markGlow,
+  .markOrbit,
+  .markDot,
+  .createButton::before,
+  .footerTopGlow,
+  .heart,
+  .header,
+  .brand,
+  .nav,
+  .headerActions,
+  .main,
+  .footerBrand,
+  .footerGroup,
+  .madeInIndia,
+  .dmProduct,
+  .copyright {
+    animation:
+      none !important;
+  }
+
+
+  .navLink,
+  .createButton,
+  .signIn,
+  .footerLink,
+  .footerArrow,
+  .arrow {
+    transition:
+      none !important;
+  }
+}

@@ -1,0 +1,106 @@
+# ============================================================
+# WORLDWIDE DIPO
+# Supabase Local Development Configuration
+# ============================================================
+
+project_id = "worldwide-dipo"
+
+# ------------------------------------------------------------
+# API
+# ------------------------------------------------------------
+
+[api]
+enabled = true
+port = 54321
+schemas = ["public", "storage"]
+extra_search_path = ["public", "extensions"]
+max_rows = 1000
+
+# ------------------------------------------------------------
+# Database
+# ------------------------------------------------------------
+
+[db]
+port = 54322
+shadow_port = 54320
+major_version = 17
+
+# ------------------------------------------------------------
+# Studio
+# ------------------------------------------------------------
+
+[studio]
+enabled = true
+port = 54323
+
+# ------------------------------------------------------------
+# Inbucket
+# Local email testing only
+# ------------------------------------------------------------
+
+[inbucket]
+enabled = true
+port = 54324
+smtp_port = 54325
+pop3_port = 54326
+
+# ------------------------------------------------------------
+# Storage
+# ------------------------------------------------------------
+
+[storage]
+enabled = true
+file_size_limit = "6MiB"
+
+# ------------------------------------------------------------
+# Auth
+# ------------------------------------------------------------
+
+[auth]
+enabled = true
+
+# Production auth URLs are configured in the Supabase
+# dashboard. These local URLs are only for local development.
+site_url = "http://localhost:3000"
+
+additional_redirect_urls = [
+  "http://localhost:3000/**",
+  "http://127.0.0.1:3000/**"
+]
+
+enable_signup = true
+
+# Keep email confirmation enabled for a production-grade
+# authentication flow. Local development can still use
+# Inbucket for testing email verification / OTP flows.
+enable_confirmations = true
+
+# ------------------------------------------------------------
+# Email
+# ------------------------------------------------------------
+
+[auth.email]
+enable_signup = true
+enable_confirmations = true
+double_confirm_changes = true
+enable_reauthentication = true
+max_frequency = "1m"
+
+# ------------------------------------------------------------
+# OAuth
+# ------------------------------------------------------------
+
+[auth.external.google]
+enabled = false
+client_id = "env(GOOGLE_CLIENT_ID)"
+secret = "env(GOOGLE_CLIENT_SECRET)"
+redirect_uri = "http://127.0.0.1:54321/auth/v1/callback"
+
+# ------------------------------------------------------------
+# Edge Functions
+# ------------------------------------------------------------
+
+[edge_runtime]
+enabled = true
+policy = "per_worker"
+inspector_port = 8083

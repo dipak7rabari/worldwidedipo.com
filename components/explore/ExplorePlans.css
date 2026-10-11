@@ -1,0 +1,138 @@
+.dipoExplorePage .dipoRealSection {
+  margin-top: 0;
+  margin-bottom: 60px;
+  padding-top: 0;
+}
+
+.dipoRealSection .dipoPinterestGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  columns: auto;
+}
+
+.dipoRealSection .dipoRealCard {
+  margin: 0;
+  min-width: 0;
+  border: 1px solid #e3e7ef;
+  border-radius: 25px;
+  padding: 7px;
+  background: #fff;
+  box-shadow: 0 5px 20px #15203706;
+  overflow: hidden;
+  align-self: start;
+}
+
+.dipoRealSection .dipoPinImageButton {
+  width: 100%;
+  border-radius: 19px;
+  overflow: hidden;
+}
+
+.dipoRealSection .dipoPinImage {
+  height: auto !important;
+  aspect-ratio: 4 / 5;
+}
+
+.dipoRealSection .dipoCharacterImage {
+  object-fit: cover;
+}
+
+.dipoRealSection .dipoPinInfo {
+  padding: 12px 9px 15px;
+}
+
+.dipoPlanLabel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 12px 8px 0;
+}
+
+.dipoYours {
+  font-size: 10px;
+  color: #64748b;
+}
+
+.dipoRealSection .dipoPlan-pro {
+  border-color: #d5c8f3;
+  box-shadow: 0 6px 24px #7250c312;
+  background: linear-gradient(
+    150deg,
+    #fff 70%,
+    #f4f0ff
+  );
+}
+
+.dipoRealSection .dipoPlan-elite {
+  border-color: #beab7e;
+  box-shadow: 0 8px 30px #99712714;
+  background: linear-gradient(
+    145deg,
+    #fff 65%,
+    #f6f0e1
+  );
+}
+
+.dipoRealSection .dipoPlan-elite .dipoPinOpenIcon {
+  background: #242320;
+  color: #f4d99a;
+}
+
+.dipoRealSection .dipoPlan-pro .dipoPinOpenIcon {
+  background: #5940a5;
+  color: white;
+}
+
+.dipoRealSection .dipoPinTitleRow h3 {
+  overflow-wrap: anywhere;
+}
+
+.dipoRealSection .dipoPinMeta {
+  flex-wrap: wrap;
+}
+
+.dipoRealSection .dipoPinImageTop {
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 760px) {
+  .dipoRealSection .dipoPinterestGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .dipoRealSection .dipoRealCard {
+    border-radius: 19px;
+    padding: 5px;
+  }
+
+  .dipoPlanLabel {
+    padding: 10px 3px 0;
+  }
+
+  .dipoRealSection .dipoPinInfo {
+    padding: 10px 4px;
+  }
+
+  .dipoRealSection .dipoPinTitleRow h3 {
+    font-size: 16px;
+  }
+
+  .dipoRealSection .dipoPinImageBottom {
+    font-size: 12px;
+  }
+
+  .dipoExplorePage .dipoHeaderActions {
+    gap: 6px;
+  }
+}
+
+@media (max-width: 370px) {
+  .dipoRealSection .dipoPinterestGrid {
+    grid-template-columns: 1fr;
+  }
+}
